@@ -1,13 +1,14 @@
+import {useEffect, useState} from 'react';
 import {
     Center, Flex, Heading, Stack, Image
   } from "@chakra-ui/react";
-import era from "../Img/era.png"
+  import getTeamPlayers from '../APIUtils/getTeamPlayers';
 
 function TeamTab({teams}) {
   
     return (
         <>
-            {teams.map(x => x.active === true ? <Flex justifyContent="center" minHeight="50vh">
+            {teams.map(x => x.active === 1 ? <Flex justifyContent="center" minHeight="50vh">
                     <Heading>{x.team_name}</Heading>
             </Flex>
             :
