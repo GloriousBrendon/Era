@@ -25,3 +25,4 @@ Route.get('/', async () => {
 })
 
 Route.resource('/teams', 'TeamsController').apiOnly()
+Route.resource('/players', 'PlayersController').apiOnly()

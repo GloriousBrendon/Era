@@ -11,13 +11,6 @@ export default class GamesController {
         const newTeamSchema = schema.create({
             active: schema.boolean(),
             team_name: schema.string({ trim: true }),
-            top: schema.string({ trim: true }),
-            jungle: schema.string({ trim: true }),
-            mid: schema.string({ trim: true }),
-            bot: schema.string({ trim: true }),
-            supp: schema.string({ trim: true }),
-            sub1: schema.string({ trim: true }),
-            sub2: schema.string({ trim: true }),
         })
 
         const payload = await request.validate({schema: newTeamSchema})
@@ -29,8 +22,14 @@ export default class GamesController {
         return team;
     }
 
-    public async show({params}: HttpContextContract) {
-        return Team.findOrFail(params.id)
+    public async show(ctx: HttpContextContract) {
+        const { id } = ctx.request.params()
+
+        const team = await Team.find(id)
+
+        await team?.load('players')
+
+        return { team }
     }
 
     public async update({params, request}: HttpContextContract) {
@@ -40,19 +39,7 @@ export default class GamesController {
 
         team.team_name = body.name
 
-        team.top = body.top
-
-        team.jungle = body.jungle
-
-        team.mid = body.mid
-
-        team.bot = body.bot
-
-        team.supp = body.supp
-
-        team.sub1 = body.sub1
-
-        team.sub2 = body.sub2
+        team.active = body.active
 
         return team.save()
     }

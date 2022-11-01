@@ -1,9 +1,9 @@
 import TeamTab from "../Components/TeamTab";
 
-function Teams() {
+function Teams({teams}) {
   return (
     <>
-        <TeamTab />
+        <TeamTab teams={teams} />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
+import Player from './Player'
 
 export default class Team extends BaseModel {
   @column({ isPrimary: true })
@@ -11,26 +12,13 @@ export default class Team extends BaseModel {
   @column()
   public team_name: string
 
-  @column()
-  public top: string
+  @hasMany(() => Player, {
+    foreignKey: "teamId"
+  })
+  public players: HasMany<typeof Player>
 
-  @column()
-  public jungle: string
-
-  @column()
-  public mid: string
-
-  @column()
-  public bot: string
-
-  @column()
-  public supp: string
-
-  @column()
-  public sub1: string
-
-  @column()
-  public sub2: string
+  @column.dateTime({ autoCreate: true })
+  public createdAt: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
