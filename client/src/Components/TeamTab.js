@@ -5,6 +5,27 @@ import {
   import getTeamPlayers from '../APIUtils/getTeamPlayers';
 
 function TeamTab({teams}) {
+
+  //http://127.0.0.1:3333/teams
+
+  const [teamData, setTeamData] = useState()
+
+  useEffect(() => {
+    for (var teamId=1; teamId <= teams.length; teamId++) {
+      fetch(`http://127.0.0.1:3333/teams/${teamId}`, {
+        method: "GET",
+              headers: {
+                  "Content-Type": "application/json"
+              }
+      })
+      .then((result) =>result.json())
+      .then((data) => console.log({data}))
+    }
+  },[])
+
+  useEffect(() => {
+    console.log(teamData)
+  },[teamData])
   
     return (
         <>
