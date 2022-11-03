@@ -33,7 +33,7 @@ function SideBar({ navSize, changeNavSize}) {
           alignItems="center"
           as="nav"
         >
-            <Image pt={2} src={era} />
+            <Image pt={1} src={era} />
             <hr/>
           <IconButton
             size="lg"

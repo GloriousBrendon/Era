@@ -4,7 +4,7 @@ function About() {
   return (
     <>
       <Container maxW='8xl'>
-        <Center minH="100vh">
+        <Center minH="80vh">
           <Box>
         <Heading size="4xl" pt={5}>Who is era?</Heading>
         <Text>Era is an esports organization founded in 2018. Created to compete in the South African League of Legends esports scene, Era has

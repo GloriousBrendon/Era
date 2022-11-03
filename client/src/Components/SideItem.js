@@ -16,7 +16,7 @@ function SideItem({ navSize, title, icon, active, description }) {
   
     return (
         <Flex
-            mt={30}
+            mt={5}
             flexDir="column"
             w="100%"
             alignItems={navSize === "small" ? "center" : "flex-start"}
@@ -26,6 +26,7 @@ function SideItem({ navSize, title, icon, active, description }) {
                 <Link
                     borderLeft={active && "3px solid red"}
                     backgroundColor={active && "blackAlpha.200"}
+                    p="3px"
                     _hover={{
                         textDecor: "none",
                         color: "red",

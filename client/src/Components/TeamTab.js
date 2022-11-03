@@ -26,19 +26,19 @@ function TeamTab({teams}) {
     else return (
         <>
             {teams.map(x => x.active === 1 ? 
-            <Box p={3} borderBottom="solid 1px grey" key={x.id} justifyContent="center" minHeight="20vh">
-              <Stack bgGradient={`linear(to-r, dark, ${x.team_name}, dark)`}>
+            <Box m={2} p={3} bgGradient={`linear(to-r, dark, ${x.team_name}, dark)`} borderBottom={`solid 1px ${x.team_name}`} key={x.id} justifyContent="center" minHeight="20vh">
+              <Stack p={2} bg='dark'>
               <Heading>{x.team_name}</Heading>
-              <Grid templateColumns='repeat(5, 1fr)' gap={6}>
+              <Grid templateColumns='repeat(5, 1fr)' gap={3}>
                 {
                   positions.map(p => 
                     <GridItem w='100%'>
-                      <Image boxSize='5rem' src={require(`../Img/${p}.png`)} />
+                      <Image h="40%" w="auto" src={require(`../Img/${p}.png`)} />
                       {players.map(y =>
                       <>
                           {(y.team_id === x.id && y.position === p.toString()) ? 
                           <Stack>
-                          <a href={`https://www.op.gg/summoners/euw/${y.name}`}><Heading>{y.name}</Heading></a>
+                          <a href={`https://www.op.gg/summoners/euw/${y.name}`}><Heading size="md">{y.name}</Heading></a>
                           </Stack>
                           :
                           <></>
