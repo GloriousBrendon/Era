@@ -26,15 +26,11 @@ function SideItem({ navSize, title, icon, active, description }) {
                 <Link
                     borderLeft={active && "3px solid red"}
                     backgroundColor={active && "blackAlpha.200"}
-                    p={3}
                     _hover={{
                         textDecor: "none",
                         color: "red",
                         transition: '0.1s'
                 }}
-                
-                onMouseEnter={onOpen}
-                onMouseLeave={onClose}
                     w={navSize === "large" && "100%"}
                 >
                 <MenuButton w="100%" >
