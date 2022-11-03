@@ -5,6 +5,7 @@ import { Box, Heading } from '@chakra-ui/react';
 import SideBar from './Components/SideBar';
 import Home from './Pages/Home';
 import Teams from './Pages/Teams';
+import About from './Pages/About';
 import getTeams from './APIUtils/getTeams';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/teams" element={<Teams teams={teams} />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );

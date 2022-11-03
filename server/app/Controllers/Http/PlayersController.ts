@@ -44,6 +44,8 @@ export default class GamesController {
         player.active = body.active
 
         player.position = body.position
+        
+        player.teamId = body.team_id
 
         return player.save()
     }

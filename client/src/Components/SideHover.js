@@ -25,7 +25,7 @@ function SideHover({ title, description }) {
                 w={250}
                 flexDir="column"
                 alignItems="center"
-                bg="red"
+                bg="era"
                 borderRadius="10px"
                 textAlign="center"
                 boxShadow="xl"

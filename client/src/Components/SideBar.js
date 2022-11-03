@@ -5,7 +5,7 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import SideItem from "./SideItem";
 import { Link } from "react-router-dom";
-import { BsHouseDoor, BsPeople } from "react-icons/bs"
+import { BsHouseDoor, BsPeople, BsInfoSquare } from "react-icons/bs"
 import era from "../Img/era.png";
 
 function SideBar({ navSize, changeNavSize}) {
@@ -50,6 +50,9 @@ function SideBar({ navSize, changeNavSize}) {
         </Box>
         <Box w="100%" onClick={() => setActivePanel("Teams")}>
         <Link to="/teams"><SideItem navSize={navSize} icon={BsPeople} title="Teams" description={description} active={activePanel === "Teams" ? true : false} /></Link>
+        </Box>
+        <Box w="100%" onClick={() => setActivePanel("About")}>
+        <Link to="/about"><SideItem navSize={navSize} icon={BsInfoSquare} title="About" description={description} active={activePanel === "About" ? true : false} /></Link>
         </Box>
             
         </Flex>
