@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Teams from './Pages/Teams';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Admin from './Pages/Admin';
 import getTeams from './APIUtils/getTeams';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/teams" element={<Teams teams={teams} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       </Box>
     </BrowserRouter>

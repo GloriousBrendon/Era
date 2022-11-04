@@ -26,3 +26,4 @@ Route.get('/', async () => {
 
 Route.resource('/teams', 'TeamsController').apiOnly()
 Route.resource('/players', 'PlayersController').apiOnly()
+Route.resource('/login', 'LoginController').apiOnly()
