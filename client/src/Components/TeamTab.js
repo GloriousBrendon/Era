@@ -1,5 +1,6 @@
 import { Box, Center, Divider, Flex, Grid, GridItem, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import { useEffect, useState } from 'react';
+import getPlayers from '../APIUtils/getPlayers';
 
 function TeamTab({teams}) {
 
@@ -8,14 +9,7 @@ function TeamTab({teams}) {
   const positions = ['Top', 'Jungle', 'Mid', 'Bot', 'Supp', 'Sub']
 
   useEffect(() =>{
-    fetch('http://127.0.0.1:3333/players', {
-      method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-    })
-    .then((result) =>result.json())
-    .then((data) => setPlayers(data))
+    getPlayers(setPlayers)
   },[])
 
   //http://127.0.0.1:3333/teams
