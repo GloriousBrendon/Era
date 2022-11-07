@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import {useEffect, useState} from 'react';
 import {
     Table,
   Thead,
@@ -10,12 +10,48 @@ import {
   TableCaption,
   TableContainer,
   Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton
   } from "@chakra-ui/react";
 import SimpleDateTime  from 'react-simple-timestamp-to-date';
+import { useDisclosure } from '@chakra-ui/react'
+import EditPlayer from './EditPlayer';
 
 function PlayersTable({players, teams}) {
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const [ editId, setEditId ] = useState()
+
+    function openModal(id)  {
+        setEditId(id)
+        onOpen()
+      }
   
     return (
+        <>
+        <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <EditPlayer teams={teams} editId={editId} />
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button variant='ghost'>Secondary Action</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+
         <TableContainer>
             <Table variant='striped' colorScheme='red'>
                 <TableCaption>Era players</TableCaption>
@@ -51,7 +87,7 @@ function PlayersTable({players, teams}) {
                         : 
                         <Td>Yes</Td>
                         }
-                        <Td><Button colorScheme="yellow" variant="outline">Edit</Button></Td>
+                        <Td><Button onClick={() => {openModal(p.id)}} colorScheme="yellow" variant="outline">Edit</Button></Td>
                         <Td><Button colorScheme="red" variant="outline">Delete</Button></Td>
                     </Tr>
                 ))}
@@ -69,6 +105,7 @@ function PlayersTable({players, teams}) {
                 </Tfoot>
             </Table>
         </TableContainer>
+        </>
     );
   };
   export default PlayersTable;
