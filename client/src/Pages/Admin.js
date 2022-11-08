@@ -1,8 +1,9 @@
 import {useEffect, useState} from 'react';
-import { Center, Heading, FormLabel, Input, Box, Button, InputGroup, InputRightElement, FormControl, Spinner } from "@chakra-ui/react";
+import { Center, Heading, FormLabel, Input, Box, Button, InputGroup, InputRightElement, FormControl, Spinner, Stack } from "@chakra-ui/react";
 import getPlayers from '../APIUtils/getPlayers';
 import getTeams from '../APIUtils/getTeams';
 import PlayersTable from '../Components/PlayersTable';
+import AddData from '../Components/AddData';
 import bg from "../Img/bg.svg"
 
 function Admin() {
@@ -36,7 +37,10 @@ function handleSubmit () {
         bgPosition="center"
         bgRepeat="no-repeat"
         minHeight="100vh">
+        <Stack>
+            <AddData teams={teams} />
             <PlayersTable players={players} teams={teams} />
+        </Stack>
         </Center>
     );
 

@@ -22,7 +22,7 @@ const colors = {
     LostTime: '#019092',
     Solstice: '#9F9F9F',
     Tempo: '#67FF00',
-    Zenith: '0166FF'
+    Zenith: '#0166FF'
 }
 
 const theme = extendTheme({

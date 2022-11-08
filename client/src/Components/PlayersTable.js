@@ -11,6 +11,7 @@ import {
   TableContainer,
   Button,
   Modal,
+  Box
   } from "@chakra-ui/react";
 import SimpleDateTime  from 'react-simple-timestamp-to-date';
 import { useDisclosure } from '@chakra-ui/react'
@@ -60,7 +61,7 @@ function PlayersTable({players, teams}) {
                             p.team_id === t.id ?
                             <Td>{t.team_name}</Td>
                             :
-                            <Td></Td>
+                            <></>
                         ))}
                         {p.active === 0 ? 
                         <Td>No</Td>
