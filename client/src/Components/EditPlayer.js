@@ -52,6 +52,26 @@ function EditPlayer({editId, teams}) {
         .catch(() => setResultMessage("Error"))
     }
 
+    function deleteData() {
+        setResultMessage("Are you sure you want to delete?");
+    }
+
+    function confirmDelete() {
+        fetch(`http://127.0.0.1:3333/players/${editId}`, {
+            method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+        }).then(result => {
+            if (result.ok){
+            setResultMessage("Deleted")
+        }
+        else {
+            setResultMessage("Error" + result.message)
+        }})
+        .catch(() => setResultMessage("Error"))
+    }
+
     useEffect(() => {
     fetch(`http://127.0.0.1:3333/players/${editId}`, {
       method: "GET",
@@ -101,9 +121,14 @@ function EditPlayer({editId, teams}) {
                     )}
                 </Select>
                 <Button colorScheme="green" variant="outline" m={4} onClick={saveEditData}>Save</Button>
-                <Button colorScheme="red" variant="outline" m={4} onClick={updateData}>Cancel</Button>
+                <Button colorScheme="red" variant="outline" m={4} onClick={deleteData}>Delete</Button>
                 <Box textAlign="center">
                     <Text color="red">{resultMessage}</Text>
+                    {resultMessage === "Are you sure you want to delete?" ?
+                    <Button colorScheme="red" variant="outline" m={4} onClick={confirmDelete}>Confirm</Button>
+                    :
+                    <></>
+                    }
                 </Box>
                 
             </form>

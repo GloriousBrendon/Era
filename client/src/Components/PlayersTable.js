@@ -68,7 +68,6 @@ function PlayersTable({players, teams}) {
                         <Td>Yes</Td>
                         }
                         <Td><Button onClick={() => {openModal(p.id)}} colorScheme="yellow" variant="outline">Edit</Button></Td>
-                        <Td><Button colorScheme="red" variant="outline">Delete</Button></Td>
                     </Tr>
                 ))}
                 </Tbody>
