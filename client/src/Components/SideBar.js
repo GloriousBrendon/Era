@@ -18,7 +18,7 @@ function SideBar({ navSize, changeNavSize}) {
 
   return (
     <Flex
-      bg='statedark'
+      bg='dark'
       pos="fixed"
       boxShadow="xl"
       minH="100vh"
