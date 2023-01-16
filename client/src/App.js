@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { Box, Heading } from '@chakra-ui/react';
 import Home from './Pages/Home';
+import Nav from './Components/Nav';
 import Teams from './Pages/Teams';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route exact path="/" element={<Home />} />
         {/* <Route path="/teams" element={<Teams teams={teams} />} />
