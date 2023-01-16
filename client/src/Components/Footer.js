@@ -1,4 +1,8 @@
 import era from "../Img/era.png"
+import { Link } from "react-router-dom";
+import { AiOutlineInfoCircle, AiFillTwitterCircle, AiOutlineInstagram, AiOutlineFacebook, AiOutlineYoutube } from 'react-icons/ai';
+import { BsTwitch } from 'react-icons/bs';
+import { FaTiktok } from 'react-icons/fa';
 
 function Footer() {
   
@@ -10,33 +14,30 @@ function Footer() {
         </a>
         <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
           <li>
-              <a class="transition duration-300 p-4 py-2 hover:text-purple-400" href="about.php"><i class="fa-solid fa-circle-info"></i></a>
+            <Link to="/about" class="transition duration-300 hover:text-[#922729]" href="about.php"><h1 class="text-xl p-1 py-2"><AiOutlineInfoCircle /></h1></Link>
           </li>
           <li>
-              <a class="transition duration-300 p-4 py-2 hover:text-purple-400" href="https://twitter.com/RandyMediaTech"><i class="fa-brands fa-twitter"></i></a>
+              <a class="transition duration-300 hover:text-[#922729]" href="https://twitter.com/EraEsportsNews"><h1 class="text-xl p-1 py-2"><AiFillTwitterCircle /></h1></a>
           </li>
           <li>
-              <a class="transition duration-300 p-4 py-2 hover:text-purple-400" href="https://www.instagram.com/randymedia.tech/"><i class="fa-brands fa-instagram"></i></a>
+              <a class="transition duration-300 hover:text-[#922729]" href="https://www.instagram.com/era_esports_club/"><h1 class="text-xl p-1 py-2"><AiOutlineInstagram /></h1></a>
           </li>
           <li>
-              <a class="transition duration-300 p-4 py-2 hover:text-purple-400" href="https://www.facebook.com/RandyMedia.tech"><i class="fa-brands fa-facebook"></i></a>
+              <a class="transition duration-300 hover:text-[#922729]" href="https://www.facebook.com/Eraesportsclub"><h1 class="text-xl p-1 py-2"><AiOutlineFacebook /></h1></a>
           </li>
           <li>
-              <a class="transition duration-300 p-4 py-2 hover:text-purple-400" href="https://www.linkedin.com/company/randymedia/"><i class="fa-brands fa-linkedin"></i></a>
+              <a class="transition duration-300 hover:text-[#922729]" href="https://www.youtube.com/@eraesports762"><h1 class="text-xl p-1 py-2"><AiOutlineYoutube /></h1></a>
           </li>
           <li>
-              <a class="transition duration-300 p-4 py-2 hover:text-purple-400" href=""><i class="fa-brands fa-youtube"></i></a>
+              <a class="transition duration-300 hover:text-[#922729]" href="https://www.twitch.tv/era_esports_tv"><h1 class="text-xl p-1 py-2"><BsTwitch /></h1></a>
           </li>
           <li>
-              <a class="transition duration-300 p-4 py-2 hover:text-purple-400" href=""><i class="fa-brands fa-twitch"></i></a>
-          </li>
-          <li>
-              <a class="transition duration-300 p-4 py-2 hover:text-purple-400" href=""><i class="fa-brands fa-tiktok"></i></a>
+              <a class="transition duration-300 hover:text-[#922729]" href="https://www.tiktok.com/@era.esports.clips"><h1 class="text-xl p-1 py-2"><FaTiktok /></h1></a>
           </li>
         </ul>
     </div>
     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://randymedia.tech/" class="hover:underline">RandyMedia Pty Ltd</a>. All Rights Reserved.
+    <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 created by <a href="https://randymedia.tech/" class="hover:underline">RandyMedia</a>. All Rights Reserved.
     </span>
 </footer>
     );

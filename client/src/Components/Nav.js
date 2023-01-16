@@ -48,7 +48,7 @@ function Nav() {
                 </Link>
             </li>
             <li>
-                <Link to="/contact" class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] text-[#DC7817] hover:text-[#922729]" href="contact.php"
+                <Link to="/contact" class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] text-[#E8E8E8] hover:text-[#922729]" href="contact.php"
                 >Contact Us
                 </Link>
             </li>
