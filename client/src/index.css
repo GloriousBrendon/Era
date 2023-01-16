@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,85 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: #010B11;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.darkblue {
+  color: #010B11;
+}
+
+.contact-button {
+  position: fixed;
+  background-color: #DC7817;
+  z-index: 999;
+  right: 5%;
+  bottom: 5%;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%
+}
+
+.hero-image {
+  background-image: url("./Img/bg.svg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  min-height: 95vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.about-image {
+  background-image: url("./Img/bg.svg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  min-height: 90vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.about-2 {
+  background-image: url("./Img/about2.svg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  min-height: 90vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.info-banner {
+  background-color: #181818; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.lander-image {
+  background-color: #010B11; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.clients {
+  background-color: white; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.min-60 {
+  min-height: 415px;
+}
+
+.buttonb {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
 }
