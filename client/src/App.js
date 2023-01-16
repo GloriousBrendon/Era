@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Box, Heading } from '@chakra-ui/react';
 import Home from './Pages/Home';
 import Nav from './Components/Nav';
+import Footer from './Components/Footer';
 import Teams from './Pages/Teams';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
@@ -33,6 +34,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Admin />} /> */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
