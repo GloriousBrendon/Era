@@ -1,4 +1,5 @@
 import era from "../Img/era.png"
+import { Link } from "react-router-dom";
 
 function Nav() {
   
@@ -18,9 +19,9 @@ function Nav() {
         "
         >
         <div>
-            <a href="index.php">
+            <Link to="/">
             <img src={era} width="80" height="80"></img>
-            </a>
+            </Link>
         </div>
         <button id="menu-button" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
             <span class="sr-only">Open main menu</span>
@@ -37,24 +38,19 @@ function Nav() {
                 md:pt-0"
             >
             <li>
-                <a class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]" href="about.php"
-                >About Us</a
-                >
+                <Link to="/about" class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]" href="about.php"
+                >About Us
+                </Link>
             </li>
             <li>
-                <a class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]" href="services.php"
-                >Services</a
-                >
+                <Link to="/teams" class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]" href="services.php"
+                >Teams
+                </Link>
             </li>
             <li>
-                <a class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]" href="clients.php"
-                >Clients</a
-                >
-            </li>
-            <li>
-                <a class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] text-[#DC7817] hover:text-[#922729]" href="contact.php"
-                >Contact Us</a
-                >
+                <Link to="/contact" class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] text-[#DC7817] hover:text-[#922729]" href="contact.php"
+                >Contact Us
+                </Link>
             </li>
             </ul>
         </div>

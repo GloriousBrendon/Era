@@ -29,10 +29,10 @@ function App() {
       <Nav />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        {/* <Route path="/teams" element={<Teams teams={teams} />} />
+        <Route path="/teams" element={<Teams teams={teams} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<Admin />} /> */}
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       <Footer />
     </BrowserRouter>
