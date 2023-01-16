@@ -13,7 +13,7 @@ function Nav() {
             md:py-0
             px-4
             text-lg text-gray-700
-            bg-gradient-to-b from-[#010B11] to-[#010B11]
+            bg-gradient-to-b from-[#181818] to-[#181818]
             bg-white border-gray-200
         "
         >
@@ -37,22 +37,22 @@ function Nav() {
                 md:pt-0"
             >
             <li>
-                <a class="transition duration-300 md:p-4 py-2 block text-purple-400 hover:text-[#70CDCE]" href="about.php"
+                <a class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]" href="about.php"
                 >About Us</a
                 >
             </li>
             <li>
-                <a class="transition duration-300 md:p-4 py-2 block text-purple-400 hover:text-[#70CDCE]" href="services.php"
+                <a class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]" href="services.php"
                 >Services</a
                 >
             </li>
             <li>
-                <a class="transition duration-300 md:p-4 py-2 block text-purple-400 hover:text-[#70CDCE]" href="clients.php"
+                <a class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]" href="clients.php"
                 >Clients</a
                 >
             </li>
             <li>
-                <a class="transition duration-300 md:p-4 py-2 block text-purple-400 text-[#DC7817] hover:text-[#70CDCE]" href="contact.php"
+                <a class="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] text-[#DC7817] hover:text-[#922729]" href="contact.php"
                 >Contact Us</a
                 >
             </li>

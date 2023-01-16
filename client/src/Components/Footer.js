@@ -3,7 +3,7 @@ import era from "../Img/era.png"
 function Footer() {
   
     return (
-        <footer class="p-4 bg-white md:px-6 md:py-8 bg-gradient-to-b from-[#010B11] to-[#010B11]">
+        <footer class="p-4 bg-white md:px-6 md:py-8 bg-gradient-to-b from-[#181818] to-[#181818]">
     <div class="sm:flex sm:text-center sm:justify-between">
         <a href="index.php" class="flex items-center mb-4 sm:mb-0">
             <img src={era} class="mr-3 h-10" alt="RandyMedia Logo" />
