@@ -32,6 +32,7 @@ function Nav() {
         </button>
 
         <div className={
+            "lg:flex md:flex" +
               (navbarOpen ? "" : " hidden")
             }
             id="menu">
