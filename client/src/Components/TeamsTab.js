@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Heading, Image } from "@chakra-ui/react";
+import { Box, Center, Divider, Flex, Grid, GridItem, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import { useEffect, useState } from 'react';
 import getPlayers from '../APIUtils/getPlayers';
 

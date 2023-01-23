@@ -1,4 +1,5 @@
 import era from "../Img/era.png"
+import league from "../Img/league-of-legends.png"
 
 function About() {
   return (
@@ -34,8 +35,8 @@ experience in the South African esports scene, and our growth backs up the loyal
                 </div>
                 <div className="transition duration-300 ease-in-out min-60 relative py-16 px-5 border border-b-slate-200 text-center hover:border hover:border-[#922729] rounded">
                         <div className="flex justify-center text-center text-[#70CDCE]">
-                        <img src="./img/league-of-legends.png" height="100px" width="100px" /></div>
-                        <h1 className="text-3xl font-semibold mt-2">League of Legends</h1>
+                        <img src={league} height="100px" width="100px" /></div>
+                        <h1 className="text-3xl font-semibold mt-2">Accomplishments</h1>
                         <p className="pt-2">1st 2017: HP Omen Championship</p>
                         <p className="pt-2">1st 2019: VS Gaming</p>
                         <p className="pt-2">2nd Mettlestate season 3 2022</p>
