@@ -31,6 +31,8 @@ function EditPlayer({editId, teams}) {
         }
     },[player])
 
+    console.log(player)
+
     function updateData(e) {
         setEditData({ ...editData, [e.target.id] : e.target.value });
     }
@@ -87,7 +89,7 @@ function EditPlayer({editId, teams}) {
         console.log(editData)
     },[editData])
 
-    if (player === undefined)
+    if ((player === undefined) || (editData === undefined))
     return (
         <Spinner />
     ) 
@@ -102,20 +104,20 @@ function EditPlayer({editId, teams}) {
         <Center>
             <form>
                 <FormLabel>Name</FormLabel>
-                <Input id="name" onChange={updateData} value={player.name} />
+                <Input id="name" onChange={(e) => updateData(e)} value={editData.name} />
                 <FormLabel>Position</FormLabel>
-                <Select id="position" onChange={updateData} value={player.position}>
+                <Select id="position" onChange={(e) => updateData(e)} value={editData.position}>
                 {positions.map(p => 
                     <option value={p}>{p}</option>
                     )}
                 </Select>
                 <FormLabel>Active</FormLabel>
-                <Select id="active" onChange={updateData} value={player.active}>
+                <Select id="active" onChange={(e) => updateData(e)} value={editData.active}>
                     <option value={true}>Yes</option>
                     <option value={false}>No</option>
                 </Select>
                 <FormLabel>Team</FormLabel>
-                <Select id="team_id" onChange={updateData} value={player.active}>
+                <Select id="team_id" onChange={(e) => updateData(e)} value={editData.team_id}>
                     {teams.map(t => 
                     <option value={t.id}>{t.team_name}</option>
                     )}

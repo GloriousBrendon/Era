@@ -35,7 +35,7 @@ function TeamTab({teams}) {
                       <Image h="50px" w="auto" src={require(`../Img/${p}.png`)} />
                       {players.map(y =>
                       <>
-                          {(y.team_id === x.id && y.position === p.toString()) ? 
+                          {(y.team_id === x.id && y.active === 1 && y.position === p.toString()) ? 
                           <h1 className="text-3xl font-semibold pb-5">{y.name}</h1>
                           :
                           <></>
