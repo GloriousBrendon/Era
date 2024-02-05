@@ -1,15 +1,25 @@
-import era from "../Img/era.png"
+import { Center, Stack, Image, Heading } from "@chakra-ui/react";
+import introversionLogo from "../Img/Introversion.png"
 
 function Hero() {
   
     return (
         <section className="hero-image grid content-center justify-center">
-        <div className="align-middle">
-            <img src={era} width="600" height="600"></img>
-            <h1 className="text-5xl font-semibold mt-2 pl-3">
-            Esports
-            </h1>
-            </div>
+            <Stack>
+            <Center>
+            <Image src={introversionLogo} width="500" height="500"></Image>
+            </Center>
+            <Center>
+            <Heading>
+            INTROVERSION
+            </Heading>
+            </Center>
+            <Center>
+            <Heading>
+            ESPORTS
+            </Heading>
+            </Center>
+            </Stack>
         </section>
     );
   };

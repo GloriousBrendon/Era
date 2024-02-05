@@ -4,7 +4,7 @@ import getPlayers from '../APIUtils/getPlayers';
 import getTeams from '../APIUtils/getTeams';
 import PlayersTable from '../Components/PlayersTable';
 import AddData from '../Components/AddData';
-import bg from "../Img/bg.svg"
+import hero from "../Img/hero.jpg"
 
 function Admin() {
     const [showPassword, setShowPassword] = useState(false);
@@ -33,7 +33,7 @@ function handleSubmit () {
 
     else return (
         <Center
-        bgImage={bg}
+        bgImage={hero}
         bgPosition="center"
         bgRepeat="no-repeat"
         minHeight="100vh">
