@@ -9,16 +9,6 @@ function Hero() {
             <Center>
             <Image src={introversionLogo} width="500" height="500"></Image>
             </Center>
-            <Center>
-            <Heading>
-            INTROVERSION
-            </Heading>
-            </Center>
-            <Center>
-            <Heading>
-            ESPORTS
-            </Heading>
-            </Center>
             </Stack>
         </section>
     );

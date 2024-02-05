@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react'
-import "@fontsource/orbitron"
+import "@fontsource/roboto-condensed"
 // import { extendTheme}"@fontsource/alegreya";
 
 const breakpoints = {
@@ -28,7 +28,8 @@ const colors = {
 
 const theme = extendTheme({
   fonts: {
-    heading: 'orbitron, sans-serif',
+    heading: 'Roboto Condensed, sans-serif',
+    body: 'Roboto Condensed, sans-serif'
   },
   textStyles: {
   labels: {

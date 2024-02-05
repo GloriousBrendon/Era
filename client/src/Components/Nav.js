@@ -1,6 +1,7 @@
 import {useState} from "react";
-import era from "../Img/era.png"
+import introversion from "../Img/Introversion.png"
 import { Link } from "react-router-dom";
+import { Image, Text, Center, Heading } from "@chakra-ui/react";
 
 function Nav() {
 
@@ -17,13 +18,16 @@ function Nav() {
             md:py-0
             px-4
             text-lg text-gray-700
-            bg-gradient-to-b from-[#181818] to-[#181818]
-            bg-white border-gray-200
-        "
+            bg-zinc-800
+            bg-opacity-0
+            bg-white border-gray-200"
         >
         <div>
             <Link to="/">
-            <img src={era} width="80" height="80"></img>
+            <Center>
+            <Image my="3" src={introversion} width="50" height="50"></Image>
+            <Heading size="lg" color="white" >INTROVERSION ESPORTS</Heading>
+            </Center>
             </Link>
         </div>
         <button onClick={() => setNavbarOpen(!navbarOpen)} type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -45,17 +49,17 @@ function Nav() {
                 md:pt-0"
             >
             <li>
-                <Link to="/about" className="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]"
+                <Link to="/about" className="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#429E9D]"
                 >About Us
                 </Link>
             </li>
             <li>
-                <Link to="/teams" className="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]"
+                <Link to="/teams" className="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#429E9D]"
                 >Teams
                 </Link>
             </li>
             <li>
-                <Link to="/contact" className="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] text-[#E8E8E8] hover:text-[#922729]"
+                <Link to="/contact" className="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] text-[#E8E8E8] hover:text-[#429E9D]"
                 >Contact Us
                 </Link>
             </li>
