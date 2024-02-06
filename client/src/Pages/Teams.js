@@ -1,11 +1,11 @@
 import { Container } from "@chakra-ui/react";
-import TeamTab from "../Components/TeamTab";
+import TeamsTab from "../Components/TeamsTab";
 
 function Teams({teams}) {
   return (
     <>
       <Container maxW='8xl'>
-        <TeamTab teams={teams} />
+        <TeamsTab teams={teams} />
       </Container>
     </>
   );

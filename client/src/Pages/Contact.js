@@ -3,13 +3,14 @@ import { Box, Heading, Center, Container, Text, FormControl,
     FormErrorMessage,
     FormHelperText,
     Input } from '@chakra-ui/react';
-import bg from "../Img/bg.svg"
+import hero from "../Img/hero.jpg"
+import Hero from '../Components/Hero';
 
 function Contact() {
   return (
     <>
         <Center
-        minH="100vh" bgImage={bg}
+        minH="100vh" bgImage={hero}
         bgPosition="center"
         bgRepeat="no-repeat">
         <Container textAlign="center" maxW='8xl'>
