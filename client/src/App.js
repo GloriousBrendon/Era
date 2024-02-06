@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import { Box, Heading } from '@chakra-ui/react';
+
+import RootLayout from "./Pages/RootLayout";
 import Home from './Pages/Home';
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
@@ -12,12 +13,49 @@ import Admin from './Pages/Admin';
 import getTeams from './APIUtils/getTeams';
 
 function App() {
-
+  
   const [teams, setTeams] = useState([{
     id : 1,
     active : 1,
     team_name : "Shadow Garden"
   }])
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}>
+        <Route path="/" element={
+          <>
+            <Nav />
+            <Home  />
+          </>
+        } />
+        <Route path="/about" element={
+          <>
+          <Nav />
+            <About />  
+          </>
+        } />
+        <Route path="/contact" element={
+          <>
+          <Nav />
+            <Contact />
+          </>
+        } />
+        <Route path="/teams" element={
+          <>
+          <Nav />
+            <Teams teams={teams} />
+          </>
+        } />
+        <Route path="/teams/:playerId" element={
+          <>
+          <Nav />
+            <Teams />
+          </>
+        } />
+      </Route>
+    )
+  )
 
   useEffect(() => {
     // getTeams(setTeams)
@@ -28,17 +66,9 @@ function App() {
   },[teams])
 
   return (
-    <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/teams" element={<Teams teams={teams} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
