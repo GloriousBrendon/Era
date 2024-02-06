@@ -4,13 +4,13 @@ import introversionLogo from "../Img/Introversion.png"
 function Hero() {
   
     return (
-        <section className="hero-image grid content-center justify-center">
+            <Center minH='100vh'>
             <Stack>
-            <Center>
-            <Image src={introversionLogo} width="500" height="500"></Image>
-            </Center>
+            <Heading color="#B026FF" size="4xl">EVERY DREAM</Heading>
+            <Heading size="xl">begins with a dreamer</Heading>
+            <Heading>#StartDreaming</Heading>
             </Stack>
-        </section>
+            </Center>
     );
   };
   export default Hero;
