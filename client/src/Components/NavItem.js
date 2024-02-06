@@ -13,7 +13,7 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
   
     return (
         <Flex
-            mt={30}
+            mt={2}
             flexDir="column"
             w="100%"
             alignItems={navSize === "small" ? "center" : "flex-start"}
@@ -23,7 +23,7 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
                 <Link
                     borderLeft={active && "3px solid #B026FF"}
                     backgroundColor={active && "blackAlpha.200"}
-                    p={3}
+                    p={2}
                     borderRadius={2}
                     _hover={{
                         textDecor: "none",

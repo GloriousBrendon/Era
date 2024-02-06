@@ -13,7 +13,7 @@ function About() {
                 bgRepeat="no-repeat"
                 bgSize="cover">
                 <Box bgColor="blackAlpha.500" minH="90vh" w="100%">
-                <Center minH="90vh">
+                <Center minH="100vh">
                 <Stack textAlign="end" p="4">
                 <Heading size="4xl">
                         THE

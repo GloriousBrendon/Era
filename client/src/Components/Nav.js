@@ -46,7 +46,7 @@ function Nav() {
             }}
           />
           <Image src={introversion} width={navSize === "small" ? "50" : "150"} height={navSize === "small" ? "50" : "150"}></Image>
-        <Text display={navSize === "small" ? "none" : "flex"} mt={5} fontSize="120%" fontWeight="bold" mr={4}>INTROVERSION</Text>
+        <Text display={navSize === "small" ? "none" : "flex"} fontSize="120%" fontWeight="bold" mr={4}>INTROVERSION</Text>
         <Text display={navSize === "small" ? "none" : "flex"} color="#B026FF" mt={2} fontSize="120%" fontWeight="bold" mr={4}>ESPORTS</Text>
           <Box w="100%" onClick={() => setActivePanel("Home")}><Link to="/"><NavItem navSize={navSize} icon={BsHouseDoor} title="Home" description={description} active={activePanel === "Home" ? true : false} /></Link></Box>
           <Box w="100%" onClick={() => setActivePanel("About")}><Link to="/about"><NavItem navSize={navSize} icon={BsQuestionCircle} title="About" description={description} active={activePanel === "About" ? true : false} /></Link></Box>
