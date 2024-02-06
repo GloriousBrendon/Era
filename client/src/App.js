@@ -13,11 +13,14 @@ import getTeams from './APIUtils/getTeams';
 
 function App() {
 
-  const [navSize, changeNavSize] = useState("small")
-  const [teams, setTeams] = useState()
+  const [teams, setTeams] = useState([{
+    id : 1,
+    active : 1,
+    team_name : "Shadow Garden"
+  }])
 
   useEffect(() => {
-    getTeams(setTeams)
+    // getTeams(setTeams)
   },[])
 
   useEffect(() => {

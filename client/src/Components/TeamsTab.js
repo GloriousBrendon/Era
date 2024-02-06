@@ -5,13 +5,16 @@ import { Link } from "react-router-dom";
 
 function TeamTab({teams}) {
 
-  const [players, setPlayers] = useState()
+  const [players, setPlayers] = useState([{
+    id : 1,
+    active: 1,
+    name : "SWG Instinction INT",
+    position : "Bot",
+    team_id : 1,
+    puuid : "1UyjRGYKG3VtMk8gn38dz02IUZYHIC6YOol8oRsCNH_U6ZMgJnpL12M0SbXbXOeaDSK7FZrJdgwFkA"
+  }])
 
   const positions = ['Top', 'Jungle', 'Mid', 'Bot', 'Supp', 'Sub']
-
-  useEffect(() =>{
-    getPlayers(setPlayers)
-  },[])
 
   //http://127.0.0.1:3333/teams
 
@@ -21,6 +24,7 @@ function TeamTab({teams}) {
     else return (
         <>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-11">
+          <Center><Heading color="white">{teams.team_name}</Heading></Center>
             {teams.map(x => x.active === 1 ?
             <>
               <Link to={`${x.team_name}`} className="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]"
