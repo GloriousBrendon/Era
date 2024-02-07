@@ -20,7 +20,7 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
 
         >
             <Menu placement="right">
-                <Link
+                <Flex
                     borderLeft={active && "3px solid #B026FF"}
                     backgroundColor={active && "blackAlpha.200"}
                     p={1}
@@ -37,7 +37,6 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
                         <Icon
                         as={icon}
                         fontSize="xl"
-                        mt={1}
                         ml={1}
                         color={active ? "#B026FF" : 'white'}
                         _hover={{
@@ -45,13 +44,12 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
                         transition: '0.1s'
                 }} />
                         <Text
-                        mt={1}
                         ml={5}
                         display={navSize === "small" ? "none" : "flex"}
                         >{title}</Text>
                     </Flex>
                 </MenuButton>
-                </Link>
+                </Flex>
             </Menu>
         </Flex>
     );
