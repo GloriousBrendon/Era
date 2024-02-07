@@ -23,7 +23,7 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
                 <Link
                     borderLeft={active && "3px solid #B026FF"}
                     backgroundColor={active && "blackAlpha.200"}
-                    p={2}
+                    p={1}
                     borderRadius={2}
                     _hover={{
                         textDecor: "none",
@@ -37,12 +37,15 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
                         <Icon
                         as={icon}
                         fontSize="xl"
+                        mt={1}
+                        ml={1}
                         color={active ? "#B026FF" : 'white'}
                         _hover={{
                         color: '#fd6a3d',
                         transition: '0.1s'
                 }} />
                         <Text
+                        mt={1}
                         ml={5}
                         display={navSize === "small" ? "none" : "flex"}
                         >{title}</Text>
