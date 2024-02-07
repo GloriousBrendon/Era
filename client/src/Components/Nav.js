@@ -50,6 +50,7 @@ function Nav() {
         <Text display={navSize === "small" ? "none" : "flex"} color="#B026FF" mt={2} fontSize="120%" fontWeight="bold" mr={4}>ESPORTS</Text>
           <Box w="100%" onClick={() => setActivePanel("Home")}><Link to="/"><NavItem navSize={navSize} icon={BsHouseDoor} title="Home" description={description} active={activePanel === "Home" ? true : false} /></Link></Box>
           <Box w="100%" onClick={() => setActivePanel("About")}><Link to="/about"><NavItem navSize={navSize} icon={BsQuestionCircle} title="About" description={description} active={activePanel === "About" ? true : false} /></Link></Box>
+          <Box w="100%" onClick={() => setActivePanel("Teams")}><Link to="/teams"><NavItem navSize={navSize} icon={BsPeople} title="Teams" description={description} active={activePanel === "Teams" ? true : false} /></Link></Box>
           <Box w="100%" onClick={() => setActivePanel("Calender")}><Link to="/calender"><NavItem navSize={navSize} icon={BsCalendarDate} title="Calender" description={description} active={activePanel === "Calender" ? true : false} /></Link></Box>
         </Flex>
       
