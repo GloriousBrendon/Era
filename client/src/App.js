@@ -47,10 +47,10 @@ function App() {
             <Teams teams={teams} />
           </>
         } />
-        <Route path="/teams/:playerId" element={
+        <Route path="/teams/:team_name" element={
           <>
           <Nav />
-            <Teams />
+            <Teams teams={teams} />
           </>
         } />
       </Route>
