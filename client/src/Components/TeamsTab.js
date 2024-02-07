@@ -5,23 +5,10 @@ import { Link } from "react-router-dom";
 
 function TeamTab({teams}) {
 
-  const [players, setPlayers] = useState([{
-    id : 1,
-    active: 1,
-    name : "SWG Instinction INT",
-    position : "Bot",
-    team_id : 1,
-    puuid : "1UyjRGYKG3VtMk8gn38dz02IUZYHIC6YOol8oRsCNH_U6ZMgJnpL12M0SbXbXOeaDSK7FZrJdgwFkA"
-  }])
-
   const positions = ['Top', 'Jungle', 'Mid', 'Bot', 'Supp', 'Sub']
 
   //http://127.0.0.1:3333/teams
-
-    if (players === undefined)
-    return (<></>)
-  
-    else return (
+      return (
         <>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-11">
           <Center><Heading color="white">{teams.team_name}</Heading></Center>
@@ -32,24 +19,6 @@ function TeamTab({teams}) {
               <Box m={2} p={3} bgGradient={`linear(to-r, dark, ${x.team_name}, dark)`} borderBottom={`solid 1px ${x.team_name}`} key={x.id} justifyContent="center" minHeight="20vh">
               <Stack text-align-center p={2} bg='dark'>
               <Heading>{x.team_name}</Heading>
-                  {
-                  positions.map(p => 
-                    <GridItem w='100%'>
-                      <Flex>
-                      <Image h="50px" w="auto" src={require(`../Img/${p}.png`)} />
-                      {players.map(y =>
-                      <>
-                          {(y.team_id === x.id && y.active === 1 && y.position === p.toString()) ? 
-                          <h1 className="text-3xl font-semibold pb-5">{y.name}</h1>
-                          :
-                          <></>
-                      }
-                      </>
-                      )}
-                      </Flex>
-                    </GridItem>
-                  )
-                }
                 
               </Stack>
             </Box>
