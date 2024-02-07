@@ -1,11 +1,15 @@
 import { Container, Center } from "@chakra-ui/react";
-import TeamsTab from "../Components/TeamsTab";
+import TeamTab from "../Components/TeamTab";
+import { useParams } from 'react-router-dom';
 
 function Team({teams}) {
+
+    const teamName = useParams()
+
   return (
     <>
       <Container maxW='8xl'>
-        <Center>Hello</Center>
+        <TeamTab teamName={teamName} />
       </Container>
     </>
   );
