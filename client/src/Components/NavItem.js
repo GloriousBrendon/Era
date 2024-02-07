@@ -29,7 +29,7 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
                         textDecor: "none",
                         color: "#B026FF",
                         transition: '0.1s'
-                }}
+                    }}
                     w={navSize === "large" && "100%"}
                 >
                 <MenuButton w="100%" >

@@ -1,7 +1,8 @@
-import { Box, Center, Divider, Flex, Grid, GridItem, Heading, Image, Stack, Text } from "@chakra-ui/react";
+import { Center, Grid, GridItem, Heading, Box, Stack, Text } from "@chakra-ui/react";
 import { useEffect, useState } from 'react';
 import getPlayers from '../APIUtils/getPlayers';
 import { Link } from "react-router-dom";
+import hero from "../Img/hero.jpg"
 
 function TeamTab({teams}) {
 
@@ -10,23 +11,42 @@ function TeamTab({teams}) {
   //http://127.0.0.1:3333/teams
       return (
         <>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-11">
-          <Center><Heading color="white">{teams.team_name}</Heading></Center>
-            {teams.map(x => x.active === 1 ?
-            <>
-              <Link to={`${x.team_name}`} className="transition duration-300 md:p-4 py-2 block text-[#E8E8E8] hover:text-[#922729]"
-                >
-              <Box m={2} p={3} bgGradient={`linear(to-r, dark, ${x.team_name}, dark)`} borderBottom={`solid 1px ${x.team_name}`} key={x.id} justifyContent="center" minHeight="20vh">
-              <Stack text-align-center p={2} bg='dark'>
-              <Heading>{x.team_name}</Heading>
-                
-              </Stack>
-            </Box>
-              </Link>
-            </>
-            :
-            <></>)}
-            </div>
+          <Center minH="100vh">
+            <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+              {teams.map(x => x.active === 1 ?
+              <GridItem
+              bgImage={require(`../Img/${x.id}.jpg`)}
+              bgPosition="center"
+              bgRepeat="no-repeat"
+              bgSize="cover" w='100%'
+              _hover={{
+                textDecor: "none",
+                color: `#B026FF`
+              }}
+              >
+              <Box
+              bgColor="blackAlpha.700"
+              transition='0.1s'
+              _hover={{
+                bgColor: "blackAlpha.100",
+                transition: '0.4s'
+                }} pt="1"
+                pb="1">
+                <Link to={`${x.team_name}`} >
+                  <Center h="50vh" m={2} p={3} border={`solid 1px white`} key={x.id}
+                  _hover={{
+                  textDecor: "none",
+                  border: `solid 1px #B026FF`
+                  }}>
+                    <Heading>{x.team_name}</Heading>
+                  </Center>
+                </Link>
+                </Box>
+              </GridItem>
+              :
+              <></>)}
+            </Grid>
+          </Center>
         </>
     );
   };

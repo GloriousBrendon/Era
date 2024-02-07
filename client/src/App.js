@@ -19,7 +19,18 @@ function App() {
     id : 1,
     active : 1,
     team_name : "Shadow Garden"
-  }])
+  },
+  { 
+    id : 2,
+    active : 1,
+    team_name : "Vixen"
+  },
+  { 
+    id : 3,
+    active : 1,
+    team_name : "Akatsuki"
+  }
+])
 
   const router = createBrowserRouter(
     createRoutesFromElements(
