@@ -39,30 +39,35 @@ function App() {
           <>
             <Nav />
             <Home  />
+            <Footer />
           </>
         } />
         <Route path="/about" element={
           <>
           <Nav />
-            <About />  
+            <About />
+            <Footer />
           </>
         } />
         <Route path="/contact" element={
           <>
           <Nav />
             <Contact />
+            <Footer />
           </>
         } />
         <Route path="/teams" element={
           <>
           <Nav />
             <Teams teams={teams} />
+            <Footer />
           </>
         } />
         <Route path="/teams/:team_name" element={
           <>
           <Nav />
             <Team teams={teams} />
+            <Footer />
           </>
         } />
       </Route>
