@@ -23,7 +23,7 @@ function NavItem({ navSize, title, icon, active, description, colormode }) {
                 <Flex
                     borderLeft={active && "3px solid #B026FF"}
                     backgroundColor={active && "blackAlpha.200"}
-                    p={1}
+                    p={2}
                     borderRadius={2}
                     _hover={{
                         textDecor: "none",
