@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 import Teams from './Pages/Teams';
+import Team from './Pages/Team';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Admin from './Pages/Admin';
@@ -50,7 +51,7 @@ function App() {
         <Route path="/teams/:team_name" element={
           <>
           <Nav />
-            <Teams teams={teams} />
+            <Team teams={teams} />
           </>
         } />
       </Route>
