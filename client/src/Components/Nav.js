@@ -6,10 +6,9 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import { BsHouseDoor, BsQuestionCircle, BsCalendarDate, BsSortNumericUpAlt, BsChatRightDots, BsCashStack, BsMap, BsPeople } from "react-icons/bs"
 import NavItem from "./NavItem";
 
-function Nav() {
+function Nav({navSize, changeNavSize}) {
 
     const [navbarOpen, setNavbarOpen] = useState(false);
-    const [navSize, changeNavSize] = useState("large")
     const [activePanel, setActivePanel] = useState("Home")
     var description = "test"
   

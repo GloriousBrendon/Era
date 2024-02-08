@@ -14,6 +14,8 @@ import Admin from './Pages/Admin';
 import getTeams from './APIUtils/getTeams';
 
 function App() {
+
+  const [navSize, changeNavSize] = useState("large")
   
   const [teams, setTeams] = useState([{
     id : 1,
@@ -37,36 +39,36 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route path="/" element={
           <>
-            <Nav />
+            <Nav changeNavSize={changeNavSize} navSize={navSize} />
             <Home  />
             <Footer />
           </>
         } />
         <Route path="/about" element={
           <>
-          <Nav />
+          <Nav changeNavSize={changeNavSize} navSize={navSize} />
             <About />
             <Footer />
           </>
         } />
         <Route path="/contact" element={
           <>
-          <Nav />
+          <Nav changeNavSize={changeNavSize} navSize={navSize} />
             <Contact />
             <Footer />
           </>
         } />
         <Route path="/teams" element={
           <>
-          <Nav />
+          <Nav changeNavSize={changeNavSize} navSize={navSize} />
             <Teams teams={teams} />
             <Footer />
           </>
         } />
         <Route path="/teams/:team_name" element={
           <>
-          <Nav />
-            <Team teams={teams} />
+          <Nav changeNavSize={changeNavSize} navSize={navSize} />
+            <Team navSize={navSize} teams={teams} />
             <Footer />
           </>
         } />

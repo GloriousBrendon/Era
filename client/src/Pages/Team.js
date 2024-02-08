@@ -3,7 +3,7 @@ import TeamTab from "../Components/TeamTab";
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
-function Team({teams}) {
+function Team({teams, navSize}) {
 
     const teamName = useParams()
 
@@ -18,8 +18,8 @@ function Team({teams}) {
 
   return (
     <>
-      <Container maxW='8xl'>
-        <TeamTab players={players} teamName={teamName} />
+      <Container maxW='6xl'>
+        <TeamTab navSize={navSize} players={players} teamName={teamName} />
       </Container>
     </>
   );
