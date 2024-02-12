@@ -25,7 +25,9 @@ function TeamTab({teamName, teams, players, navSize}) {
         <Center minH="100vh">
             <Positions activePositon={activePositon} setActivePosition={setActivePosition} navSize={navSize} />
           <Stack>
-                {activePositon === "About" ? <><Heading textAlign="center" color="white">{teamName.team_name}</Heading><AboutTeam /></> : <Player />}
+                {/* {activePositon === "About" ? <><Heading textAlign="center" color="white">{teamName.team_name}</Heading><AboutTeam /></> : <Player />} */}
+                <Heading textAlign="center" color="white">{teamName.team_name}</Heading><AboutTeam />
+                <Player />
               </Stack>
           </Center>
       </>
